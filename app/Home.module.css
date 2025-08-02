@@ -1,0 +1,88 @@
+.container {
+  background-image: url("/fundo.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.overlay {
+  backdrop-filter: brightness(0.5);
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.titulo {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: var(--font-bebas);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.lista {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.posicao {
+  font-size: 1.5rem;
+  width: 3rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* espaço entre a imagem e o nome */
+}
+
+.nome {
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+}
+
+.pontos {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pontos button {
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #222;
+}
+
+.pontos span {
+  min-width: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.foto {
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
