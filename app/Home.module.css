@@ -86,3 +86,10 @@
   border: 2px solid white;
   object-fit: cover;
 }
+
+@media (max-width: 500px) {
+  .titulo {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+}
