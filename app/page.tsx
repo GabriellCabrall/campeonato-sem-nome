@@ -30,7 +30,17 @@ export default function Home() {
     return () => unsubscribe();
   }, []);
 
-  const atualizarPontos = (nome: string, novoValor: number) => {
+  const atualizarPontos = (
+    nome: string,
+    novoValor: number,
+    operacao: "soma" | "subtrai"
+  ) => {
+    const acao = operacao === "soma" ? "adicionar" : "retirar";
+    const confirmado = window.confirm(
+      `Tem certeza que deseja ${acao} uma cagada para ${nome}?`
+    );
+    if (!confirmado) return;
+
     set(ref(db, `participantes/${nome}`), novoValor);
   };
 
@@ -80,11 +90,17 @@ export default function Home() {
               </div>
 
               <div className={styles.pontos}>
-                <button onClick={() => atualizarPontos(p.nome, p.pontos - 1)}>
+                <button
+                  onClick={() =>
+                    atualizarPontos(p.nome, p.pontos - 1, "subtrai")
+                  }
+                >
                   -
                 </button>
                 <span>{p.pontos}</span>
-                <button onClick={() => atualizarPontos(p.nome, p.pontos + 1)}>
+                <button
+                  onClick={() => atualizarPontos(p.nome, p.pontos + 1, "soma")}
+                >
                   +
                 </button>
               </div>
